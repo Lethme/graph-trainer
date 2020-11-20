@@ -1,3 +1,105 @@
+class Renderer {
+    static Render(reactComponent, domObject) {
+        ReactDOM.render(
+            reactComponent,
+            domObject
+        );
+    }
+}
+
+class Navbar extends React.Component {
+    render() {
+        return (
+            <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+                <div className="container">
+                    <a className="navbar-brand" href="index.html">Exclusivity</a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="oi oi-menu"></span> Menu
+                    </button>
+
+                    <div className="collapse navbar-collapse" id="ftco-nav">
+                        <ul className="navbar-nav ml-auto">
+                            <li className="nav-item active"><a href="#section-home" className="nav-link">Home</a></li>
+                            <li className="nav-item"><a href="#section-features" className="nav-link">Features</a></li>
+                            <li className="nav-item"><a href="#section-services" className="nav-link">Services</a></li>
+                            <li className="nav-item"><a href="#section-pricing" className="nav-link">Pricing</a></li>
+                            <li className="nav-item"><a href="#section-about" className="nav-link">About</a></li>
+                            <li className="nav-item"><a href="#section-contact" className="nav-link">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        );
+    }
+}
+
+class Footer extends React.Component {
+    render() {
+        return (
+            <footer className="ftco-footer ftco-bg-dark">
+                <div className="container">
+                    <div className="row mb-5">
+                        <div className="col-md-8">
+                            <div className="row">
+                                <div className="col-md">
+                                    <div className="ftco-footer-widget mb-4">
+                                        <h2 className="ftco-heading-2">Company</h2>
+                                        <ul className="list-unstyled">
+                                            <li><a href="#" className="py-2 d-block">About</a></li>
+                                            <li><a href="#" className="py-2 d-block">Jobs</a></li>
+                                            <li><a href="#" className="py-2 d-block">Press</a></li>
+                                            <li><a href="#" className="py-2 d-block">News</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="col-md">
+                                    <div className="ftco-footer-widget mb-4">
+                                        <h2 className="ftco-heading-2">Communities</h2>
+                                        <ul className="list-unstyled">
+                                            <li><a href="#" className="py-2 d-block">Support</a></li>
+                                            <li><a href="#" className="py-2 d-block">Sharing is Caring</a></li>
+                                            <li><a href="#" className="py-2 d-block">Better Web</a></li>
+                                            <li><a href="#" className="py-2 d-block">Good Template</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="col-md">
+                                    <div className="ftco-footer-widget mb-4">
+                                        <h2 className="ftco-heading-2">Useful links</h2>
+                                        <ul className="list-unstyled">
+                                            <li><a href="#" className="py-2 d-block">Bootstrap 4</a></li>
+                                            <li><a href="#" className="py-2 d-block">jQuery</a></li>
+                                            <li><a href="#" className="py-2 d-block">HTML5</a></li>
+                                            <li><a href="#" className="py-2 d-block">Sass</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="ftco-footer-widget mb-4">
+                                <ul className="ftco-footer-social list-unstyled float-md-right float-lft">
+                                    <li><a href="#"><span className="icon-twitter"></span></a></li>
+                                    <li><a href="#"><span className="icon-facebook"></span></a></li>
+                                    <li><a href="#"><span className="icon-instagram"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md text-left">
+                            <p>&copy; Exclusivity 2017. All Rights Reserved. Made with <span
+                                className="icon-heart text-danger"></span> by <a
+                                href="https://free-template.co/">Free-Template.co</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        );
+    }
+}
+
 class MainPage extends React.Component
 {
     render()
@@ -497,66 +599,6 @@ class MainPage extends React.Component
                         </div>
                     </div>
                 </section>
-
-                <footer className="ftco-footer ftco-bg-dark">
-                    <div className="container">
-                        <div className="row mb-5">
-                            <div className="col-md-8">
-                                <div className="row">
-                                    <div className="col-md">
-                                        <div className="ftco-footer-widget mb-4">
-                                            <h2 className="ftco-heading-2">Company</h2>
-                                            <ul className="list-unstyled">
-                                                <li><a href="#" className="py-2 d-block">About</a></li>
-                                                <li><a href="#" className="py-2 d-block">Jobs</a></li>
-                                                <li><a href="#" className="py-2 d-block">Press</a></li>
-                                                <li><a href="#" className="py-2 d-block">News</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="col-md">
-                                        <div className="ftco-footer-widget mb-4">
-                                            <h2 className="ftco-heading-2">Communities</h2>
-                                            <ul className="list-unstyled">
-                                                <li><a href="#" className="py-2 d-block">Support</a></li>
-                                                <li><a href="#" className="py-2 d-block">Sharing is Caring</a></li>
-                                                <li><a href="#" className="py-2 d-block">Better Web</a></li>
-                                                <li><a href="#" className="py-2 d-block">Good Template</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="col-md">
-                                        <div className="ftco-footer-widget mb-4">
-                                            <h2 className="ftco-heading-2">Useful links</h2>
-                                            <ul className="list-unstyled">
-                                                <li><a href="#" className="py-2 d-block">Bootstrap 4</a></li>
-                                                <li><a href="#" className="py-2 d-block">jQuery</a></li>
-                                                <li><a href="#" className="py-2 d-block">HTML5</a></li>
-                                                <li><a href="#" className="py-2 d-block">Sass</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="ftco-footer-widget mb-4">
-                                    <ul className="ftco-footer-social list-unstyled float-md-right float-lft">
-                                        <li><a href="#"><span className="icon-twitter"></span></a></li>
-                                        <li><a href="#"><span className="icon-facebook"></span></a></li>
-                                        <li><a href="#"><span className="icon-instagram"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md text-left">
-                                <p>&copy; Exclusivity 2017. All Rights Reserved. Made with <span
-                                    className="icon-heart text-danger"></span> by <a
-                                    href="https://free-template.co/">Free-Template.co</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
 
                 {/*<div id="ftco-loader" className="show fullscreen">*/}
                 {/*    <svg className="circular" width="48px" height="48px">*/}

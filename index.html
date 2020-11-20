@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="assets/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
 
-    <script type="text/babel" src="./assets/js/main_page.js"></script>
-    <script type="text/babel" src="./assets/js/navbar.js"></script>
+    <script type="text/babel" src="./assets/js/components.js"></script>
 
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
@@ -34,14 +33,9 @@
 <div id="footer"></div>
 
 <script type="text/babel">
-    ReactDOM.render(
-        <Navbar/>,
-        document.getElementById("header")
-    );
-    ReactDOM.render(
-        <MainPage/>,
-        document.getElementById("page")
-    );
+    Renderer.Render(<Navbar/>, document.getElementById('header'));
+    Renderer.Render(<MainPage/>, document.getElementById('page'));
+    Renderer.Render(<Footer/>, document.getElementById('footer'));
 </script>
 
 <script src="assets/js/lib/jquery.min.js"></script>
