@@ -169,16 +169,13 @@ h1, h2, h3, h4, h5,
       left: 0;
       bottom: 0;
       right: 0; }
-  .ftco-cover .ftco-vh-100 {
-    min-height: 700px !important; }
+
 
 .ftco-slant {
   position: relative;
   overflow: hidden; }
   .ftco-slant:after {
-    width: 120%;
     height: 200px;
-    left: -10%;
     background: #f2f2f2;
     -webkit-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
