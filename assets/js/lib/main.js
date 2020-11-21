@@ -18,7 +18,6 @@ $(document).ready(function($) {
 			margin: 10,
 			nav: true,
 			stagePadding: 5,
-			nav: false,
 			navText: ['<span class="icon-chevron-left">', '<span class="icon-chevron-right">'],
 			responsive:{
 				0:{
@@ -148,17 +147,33 @@ $(document).ready(function($) {
 		 			navToggler = $('.navbar-toggler');
 		 	$('html, body').animate({
 		    scrollTop: $(hash).offset().top
-		  }, 700, 'easeInOutExpo', function(){
-		    window.location.hash = hash;
-		  });
+		  	}, 700, 'easeInOutExpo', function(){
+		    	window.location.hash = hash;
+		  	});
 
 
-		  if ( navToggler.is(':visible') ) {
-		  	navToggler.click();
-		  }
+		  	if ( navToggler.is(':visible') ) {
+		  		navToggler.click();
+		  	}
+		});
+		$(".smoothscroll[href^='#'], #back-top a[href^='#']").on('click', function(e) {
+			e.preventDefault();
+
+			var hash = this.hash,
+				navToggler = $('.navbar-toggler');
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 700, 'easeInOutExpo', function(){
+				window.location.hash = hash;
+			});
+
+
+			if ( navToggler.is(':visible') ) {
+				navToggler.click();
+			}
 		});
 		$('body').on('activate.bs.scrollspy', function () {
-		  console.log('nice');
+		  	console.log('nice');
 		})
 	};
 	OnePageNav();

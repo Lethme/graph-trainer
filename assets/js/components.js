@@ -608,6 +608,10 @@ class MainPage extends React.Component
                 {/*                stroke-miterlimit="10" stroke="#4586ff"/>*/}
                 {/*    </svg>*/}
                 {/*</div>*/}
+
+                <div id={'back-top'}>
+                    <a title="Go to Top" className={"nav-link"} href="#section-home"></a>
+                </div>
             </div>
         );
     }
