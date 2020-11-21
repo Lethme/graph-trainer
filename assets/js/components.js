@@ -139,9 +139,9 @@ class MainPage extends React.Component
                                         <h5 className="mt-0">Удобство</h5>
                                         <p className="mb-5">Tree Brains – это удобный тренажёр,
                                             идеально сочетающий в себе как теорию, так и практику</p>
+                                        <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
+                                            More</a></p>
                                     </div>
-                                    <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
-                                        More</a></p>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6">
@@ -152,9 +152,9 @@ class MainPage extends React.Component
                                         <h5 className="mt-0">Понятность</h5>
                                         <p className="mb-5">Tree Brains – это отличный, понятный даже абсолютному новичку
                                             способ разобраться не только в деревьях, но и в их алгоритмах</p>
+                                        <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
+                                            More</a></p>
                                     </div>
-                                    <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
-                                        More</a></p>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6">
@@ -166,9 +166,9 @@ class MainPage extends React.Component
                                         <p className="mb-5">Tree Brains – площадка для самосовершенствования,
                                             после работы с которой программирование деревьев уже не будет казаться
                                             чем-то сложным</p>
+                                        <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
+                                            More</a></p>
                                     </div>
-                                    <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
-                                        More</a></p>
                                 </div>
                             </div>
                             <div className="col-lg-12 col-md-6">

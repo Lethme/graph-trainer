@@ -383,6 +383,10 @@ textarea {
   height: 95%;
 }
 
+.media-body {
+  height: 90%;
+}
+
 .ftco-media {
   background: #fff;
   border-radius: 5px; }
