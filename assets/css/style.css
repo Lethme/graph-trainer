@@ -372,9 +372,16 @@ textarea {
       color: #4586FF; }
 
 .media .ftco-icon {
-  width: 100px; }
-  .media .ftco-icon span {
-    color: #4586FF; }
+  width: 100px;
+}
+
+.media .ftco-icon span {
+    color: #4586FF;
+}
+
+.tile {
+  height: 95%;
+}
 
 .ftco-media {
   background: #fff;

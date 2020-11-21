@@ -132,33 +132,33 @@ class MainPage extends React.Component
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6">
-                                <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate">
+                                <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate tile">
                                     <div className="ftco-icon mb-3"><span
                                         className="oi oi-thumb-up display-4 text-muted"></span></div>
                                     <div className="media-body">
                                         <h5 className="mt-0">Удобство</h5>
                                         <p className="mb-5">Tree Brains – это удобный тренажёр,
                                             идеально сочетающий в себе как теорию, так и практику</p>
-                                        <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
-                                            More</a></p>
                                     </div>
+                                    <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
+                                        More</a></p>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6">
-                                <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate">
+                                <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate tile">
                                     <div className="ftco-icon mb-3"><span
                                         className="oi oi-bolt display-4 text-muted"></span></div>
                                     <div className="media-body">
                                         <h5 className="mt-0">Понятность</h5>
                                         <p className="mb-5">Tree Brains – это отличный, понятный даже абсолютному новичку
                                             способ разобраться не только в деревьях, но и в их алгоритмах</p>
-                                        <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
-                                            More</a></p>
                                     </div>
+                                    <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
+                                        More</a></p>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6">
-                                <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate">
+                                <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate tile">
                                     <div className="ftco-icon mb-3"><span
                                         className="oi oi-person display-4 text-muted"></span></div>
                                     <div className="media-body">
@@ -166,13 +166,13 @@ class MainPage extends React.Component
                                         <p className="mb-5">Tree Brains – площадка для самосовершенствования,
                                             после работы с которой программирование деревьев уже не будет казаться
                                             чем-то сложным</p>
-                                        <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
-                                            More</a></p>
                                     </div>
+                                    <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
+                                        More</a></p>
                                 </div>
                             </div>
                             <div className="col-lg-12 col-md-6">
-                                <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate">
+                                <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate tile">
                                     <div className="ftco-icon mb-3"><span
                                         className="oi oi-code display-4 text-muted"></span></div>
                                     <div className="media-body">
