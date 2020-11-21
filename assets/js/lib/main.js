@@ -156,7 +156,7 @@ $(document).ready(function($) {
 		  		navToggler.click();
 		  	}
 		});
-		$(".smoothscroll[href^='#'], #back-top a[href^='#']").on('click', function(e) {
+		$(".smoothscroll[href^='#'], a[href^='#']").on('click', function(e) {
 			e.preventDefault();
 
 			var hash = this.hash,

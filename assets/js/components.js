@@ -12,7 +12,7 @@ class Navbar extends React.Component {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
                 <div className="container">
-                    <a className="navbar-brand" href="index.html">Exclusivity</a>
+                    <a className="navbar-brand" href="index.html">Tree Brains</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                             aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="oi oi-menu"></span> Menu
@@ -110,11 +110,10 @@ class MainPage extends React.Component
                     <div className="container">
                         <div className="row align-items-center justify-content-center text-center ftco-vh-100">
                             <div className="col-md-10">
-                                <h1 className="ftco-heading ftco-animate">We Love One Page Template</h1>
-                                <h2 className="h5 ftco-subheading mb-5 ftco-animate">A free template by <a
-                                    href="#">Free-Template.co</a></h2>
-                                <p><a href="https://free-template.co/" target="_blank"
-                                      className="btn btn-primary ftco-animate">Get Started</a></p>
+                                <h1 className="ftco-heading ftco-animate">Tree Brains</h1>
+                                <h2 className="h5 ftco-subheading mb-5 ftco-animate">Алгоритмы на деревьях</h2>
+                                <p><a href="#section-features" target="_blank"
+                                      className="btn btn-primary ftco-animate">Подробнее</a></p>
                             </div>
                         </div>
                     </div>
@@ -125,11 +124,10 @@ class MainPage extends React.Component
 
                         <div className="row">
                             <div className="col-md-12 text-center mb-5 ftco-animate">
-                                <h2 className="text-uppercase ftco-uppercase">Our Awesome Features</h2>
+                                <h2 className="text-uppercase ftco-uppercase">Tree Brains - это...</h2>
                                 <div className="row justify-content-center">
                                     <div className="col-md-7">
-                                        <p className="lead">Far far away, behind the word mountains, far from the
-                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <p className="lead">Позвольте нам немного рассказать о данном проекте</p>
                                     </div>
                                 </div>
                             </div>
@@ -138,9 +136,9 @@ class MainPage extends React.Component
                                     <div className="ftco-icon mb-3"><span
                                         className="oi oi-thumb-up display-4 text-muted"></span></div>
                                     <div className="media-body">
-                                        <h5 className="mt-0">Free Bootstrap 4</h5>
-                                        <p className="mb-5">Far far away, behind the word mountains, far from the
-                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <h5 className="mt-0">Удобство</h5>
+                                        <p className="mb-5">Tree Brains – это удобный тренажёр,
+                                            идеально сочетающий в себе как теорию, так и практику</p>
                                         <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
                                             More</a></p>
                                     </div>
@@ -151,9 +149,9 @@ class MainPage extends React.Component
                                     <div className="ftco-icon mb-3"><span
                                         className="oi oi-bolt display-4 text-muted"></span></div>
                                     <div className="media-body">
-                                        <h5 className="mt-0">Fast Loading</h5>
-                                        <p className="mb-5">Far far away, behind the word mountains, far from the
-                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <h5 className="mt-0">Понятность</h5>
+                                        <p className="mb-5">Tree Brains – это отличный, понятный даже абсолютному новичку
+                                            способ разобраться не только в деревьях, но и в их алгоритмах</p>
                                         <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
                                             More</a></p>
                                     </div>
@@ -164,49 +162,23 @@ class MainPage extends React.Component
                                     <div className="ftco-icon mb-3"><span
                                         className="oi oi-person display-4 text-muted"></span></div>
                                     <div className="media-body">
-                                        <h5 className="mt-0">Designer &amp; Developer</h5>
-                                        <p className="mb-5">Far far away, behind the word mountains, far from the
-                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <h5 className="mt-0">Простота</h5>
+                                        <p className="mb-5">Tree Brains – площадка для самосовершенствования,
+                                            после работы с которой программирование деревьев уже не будет казаться
+                                            чем-то сложным</p>
                                         <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
                                             More</a></p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div className="col-lg-4 col-md-6">
+                            <div className="col-lg-12 col-md-6">
                                 <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate">
                                     <div className="ftco-icon mb-3"><span
                                         className="oi oi-code display-4 text-muted"></span></div>
                                     <div className="media-body">
-                                        <h5 className="mt-0">Clean Code</h5>
-                                        <p className="mb-5">Far far away, behind the word mountains, far from the
-                                            countries Vokalia and Consonantia, there live the blind texts.</p>
-                                        <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
-                                            More</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6">
-                                <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate">
-                                    <div className="ftco-icon mb-3"><span
-                                        className="oi oi-magnifying-glass display-4 text-muted"></span></div>
-                                    <div className="media-body">
-                                        <h5 className="mt-0">Search Engine</h5>
-                                        <p className="mb-5">Far far away, behind the word mountains, far from the
-                                            countries Vokalia and Consonantia, there live the blind texts.</p>
-                                        <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
-                                            More</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6">
-                                <div className="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate">
-                                    <div className="ftco-icon mb-3"><span
-                                        className="oi oi-phone display-4 text-muted"></span></div>
-                                    <div className="media-body">
-                                        <h5 className="mt-0">Fully Responsive</h5>
-                                        <p className="mb-5">Far far away, behind the word mountains, far from the
-                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <h5 className="mt-0">Эффективность</h5>
+                                        <p className="mb-5">Tree Brains – это эффективное и доступное каждому обучение всему,
+                                            что связано с деревьями</p>
                                         <p className="mb-0"><a href="#" className="btn btn-primary btn-sm">Learn
                                             More</a></p>
                                     </div>
@@ -490,12 +462,10 @@ class MainPage extends React.Component
 
                         <div className="row mb-5">
                             <div className="col-md-12 text-center ftco-animate">
-                                <h2 className="text-uppercase ftco-uppercase">About Us</h2>
+                                <h2 className="text-uppercase ftco-uppercase">О нас</h2>
                                 <div className="row justify-content-center mb-5">
                                     <div className="col-md-7">
-                                        <p className="lead">Far far away, behind the word mountains, far from the
-                                            countries Vokalia and Consonantia, there live the blind texts. Feel free to
-                                            send us an email to <a href="#">info@yourdomain.com</a></p>
+                                        <p className="lead">Позвольте теперь немного рассказать Вам о нас самих.</p>
                                     </div>
                                 </div>
                             </div>
@@ -507,7 +477,7 @@ class MainPage extends React.Component
                                      className="img-fluid"/>
                             </div>
                             <div className="col-md-6 p-md-5">
-                                <h3 className="h3 mb-4">Far far away, behind the word mountains</h3>
+                                <h3 className="h3 mb-4">Руссу Юрий</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and
                                     Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
                                     at the coast of the Semantics, a large language ocean.</p>
@@ -520,7 +490,20 @@ class MainPage extends React.Component
                                      className="img-fluid"/>
                             </div>
                             <div className="col-md-6 p-md-5 order-md-1">
-                                <h3 className="h3 mb-4">Far from the countries Vokalia and Consonantia</h3>
+                                <h3 className="h3 mb-4">Семёночкин Дмитрий</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                    Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
+                                    at the coast of the Semantics, a large language ocean.</p>
+                                <p className="mb-5"><a href="#">Learn More</a></p>
+                            </div>
+                        </div>
+                        <div className="row no-gutters align-items-center ftco-animate">
+                            <div className="col-md-6 mb-md-0 mb-5">
+                                <img src="assets/img/bg_3.jpg" alt="Free Template by Free-Template.co"
+                                     className="img-fluid"/>
+                            </div>
+                            <div className="col-md-6 p-md-5">
+                                <h3 className="h3 mb-4">Востриков Евгений</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and
                                     Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
                                     at the coast of the Semantics, a large language ocean.</p>
@@ -593,8 +576,6 @@ class MainPage extends React.Component
                                         <input type="submit" className="btn btn-primary" value="Send Message"/>
                                     </div>
                                 </form>
-                            </div>
-                            <div className="col-md" id="map">
                             </div>
                         </div>
                     </div>
