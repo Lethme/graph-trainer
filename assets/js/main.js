@@ -175,16 +175,19 @@ $(document).ready(function($) {
 });
 
 $(function() {
-  
-  var $btn = $('#btnTop');
-  var $home = $('#section-home');
-  var startpoint = $home.scrollTop() + $home.height();
-  
-  $(window).on('scroll', function() {
-    if($(window).scrollTop() > startpoint) {
-      $btn.show();
-    } else {
-      $btn.hide();
-    }
-  });
+
+	var $btn = $('#btnTop');
+	var $bth_arrow = $('#top-arrow');
+	var $home = $('#section-home');
+	var startpoint = $home.scrollTop();
+
+	$(window).on('scroll', function() {
+		if($(window).scrollTop() > startpoint) {
+			$btn.fadeIn('slow');
+			$bth_arrow.fadeIn('fast');
+		} else {
+			$btn.fadeOut('fast');
+			$bth_arrow.fadeOut('fast');
+		}
+	});
 });
