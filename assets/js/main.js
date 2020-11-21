@@ -179,15 +179,15 @@ $(function() {
 	var $btn = $('#btnTop');
 	var $bth_arrow = $('#top-arrow');
 	var $home = $('#section-home');
-	var startpoint = $home.scrollTop();
+	var startpoint = $home.scrollTop() + $home.height() / 2;
 
 	$(window).on('scroll', function() {
 		if($(window).scrollTop() > startpoint) {
-			$btn.fadeIn('slow');
-			$bth_arrow.fadeIn('fast');
+			$btn.fadeIn('400');
+			$bth_arrow.fadeIn('200');
 		} else {
-			$btn.fadeOut('fast');
-			$bth_arrow.fadeOut('fast');
+			$btn.fadeOut('200');
+			$bth_arrow.fadeOut('200');
 		}
 	});
 });
