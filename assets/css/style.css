@@ -64,12 +64,13 @@ h5,
     padding-right: 20px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1200px) {
     .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 0px;
         padding-right: 0px;
+        margin: 0 .7rem;
     }
 }
 
@@ -100,7 +101,7 @@ h5,
     background: rgba(255, 255, 255, 0.05);
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1200px) {
     .ftco-navbar-light .navbar-nav>.nav-item.ftco-seperator:before {
         display: none;
     }
@@ -362,13 +363,14 @@ textarea {
     height: 100vh;
 }
 
-@media screen and (max-width: 960px) {
+
+/* @media screen and (max-width: 960px) {
     .ftco-vh-100 {
         height: inherit;
         padding-top: 5em;
         padding-bottom: 5em;
     }
-}
+} */
 
 .ftco-vh-75 {
     height: 75vh;
