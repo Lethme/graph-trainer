@@ -830,3 +830,30 @@ a.btnTop {
     background: url('../images/arrow-top.png') no-repeat center;
     background-size: cover;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #555;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #ddd;
+    border-radius: 1px;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
