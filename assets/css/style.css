@@ -844,17 +844,17 @@ img.logo {
 }
 
 ::-webkit-scrollbar-track {
-    background: #555;
+    background: #f2f2f2;
     border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #aaa;
+    background: #00bbbf;
     border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: #ddd;
+    background: #00cfd4;
     border-radius: 1px;
 }
 
