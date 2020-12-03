@@ -895,9 +895,9 @@ img.logo {
 }
 
 .tree-logo-light {
-    background: url('/assets/images/tree-logo-light.svg');
+    background: url('../images/tree-logo-light.svg');
 }
 
 .tree-logo-dark {
-    background: url('/assets/images/tree-logo-dark.svg');
+    background: url('../images/tree-logo-dark.svg');
 }
