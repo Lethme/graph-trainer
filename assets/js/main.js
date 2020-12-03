@@ -34,6 +34,8 @@ $(document).ready(function($) {
     };
     carousel();
 
+    $('.btnTop').attr('href', '#' + $('.content-section').first().attr('id'));
+
     scrollWindow();
 
     var counter = function() {
@@ -138,7 +140,7 @@ $(function() {
 
     var $btn = $('#btnTop');
     var $bth_arrow = $('#top-arrow');
-    var $home = $('#section-home');
+    var $home = $('.content-section').first();
     var startpoint = $home.scrollTop() + $home.height() / 2;
 
     $(window).on('scroll', function() {
