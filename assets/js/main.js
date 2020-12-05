@@ -16,7 +16,7 @@ $(document).ready(function($) {
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
-            nav: true,
+            nav: false,
             stagePadding: 5,
             navText: ['<span class="icon-chevron-left">', '<span class="icon-chevron-right">'],
             responsive: {
@@ -29,7 +29,10 @@ $(document).ready(function($) {
                 1000: {
                     items: 3
                 }
-            }
+            },
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true
         });
     };
     carousel();
