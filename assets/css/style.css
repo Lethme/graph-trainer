@@ -225,6 +225,7 @@ h5,
     .ftco-cover .btn {
         width: 100% !important;
         border: 1px solid red;
+        margin-top: 10px;
     }
 }
 
@@ -308,8 +309,11 @@ h5,
 }
 
 .btn.btn-sm {
+    position: absolute;
     padding: 10px 20px;
     font-size: 12px;
+    bottom: 0;
+    transform: translate(-50%, -105%);
 }
 
 .btn:before {
@@ -578,6 +582,10 @@ textarea {
     transition: all .15s ease;
     -webkit-box-shadow: -1px 1px 3px 0px rgba(50, 50, 50, 0.3);
     box-shadow: -1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .tile-block {
@@ -599,10 +607,6 @@ textarea {
 
 .price-block {
     border-radius: 2%;
-}
-
-.media-body {
-    height: 90%;
 }
 
 .ftco-media {
@@ -903,4 +907,15 @@ img.logo {
 
 .tree-logo-dark {
     background: url('../images/tree-logo-dark.svg');
+}
+
+.sections {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sections-body {
+    background: #f2f2f2;
 }
