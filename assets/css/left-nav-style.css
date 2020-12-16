@@ -1,47 +1,36 @@
 @charset "UTF-8";
-
-/**
- * Переключаемая боковая панель навигации
- * выдвигающаяся по клику слева
- */
-
 .side-menu {
-    /*  ширна произвольная, не стесняйтесь экспериментировать */
-    width: 320px;
-    min-width: 320px;
-    /* фиксируем и выставляем высоту панели на максимум */
+    width: 100%;
+    max-width: 320px;
     height: 100%;
     position: fixed;
     top: 0;
     bottom: 0;
     margin: 0;
-    /* сдвигаем (прячем) панель относительно левого края страницы */
     left: -320px;
-    /* внутренние отступы */
     padding: 15px 20px;
-    /* плавный переход смещения панели */
     -webkit-transition: left 0.3s;
     -moz-transition: left 0.3s;
     transition: left 0.3s;
-    /* определяем цвет фона панели */
-    background: #348ebf;
-    /* поверх других элементов */
+    /* background: #348ebf; */
+    background: url("../images/header-bg.png") center no-repeat;
+    background-size: cover;
     z-index: 2000;
     display: flex;
     flex-direction: column;
 }
 
 .side-menu-logo {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .side-menu-logo a {
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255, 1);
     font-size: 1.6em;
     transition: all .2s ease;
     position: relative;
     margin: 5px 10px;
+    width: auto;
 }
 
 .side-menu-logo a:hover {
@@ -80,102 +69,50 @@
     transform: translateX(0);
 }
 
-
-/**
- * Кнопка переключения панели
- * тег <label>
- */
-
 .nav-toggle {
-    /* абсолютно позиционируем */
     position: absolute;
-    /* относительно левого края панели */
     left: 320px;
-    /* отступ от верхнего края панели */
-    top: 4em;
-    /* внутренние отступы */
+    top: 0;
+    height: 100%;
     padding: 0.5em;
-    /* определяем цвет фона переключателя
-     * чаще вчего в соответствии с цветом фона панели
-    */
     background: inherit;
-    /* цвет текста */
     color: #dadada;
-    /* вид курсора */
     cursor: pointer;
-    /* размер шрифта */
     font-size: 1.2em;
     line-height: 1;
-    /* всегда поверх других элементов страницы */
     z-index: 2001;
-    /* анимируем цвет текста при наведении */
     -webkit-transition: color .25s ease-in-out;
     -moz-transition: color .25s ease-in-out;
     transition: color .25s ease-in-out;
 }
-
-
-/* определяем текст кнопки 
- * символ Unicode (TRIGRAM FOR HEAVEN)
-*/
 
 .nav-toggle:after {
     content: '\2630';
     text-decoration: none;
 }
 
-
-/* цвет текста при наведении */
-
 .nav-toggle:hover {
     color: #f4f4f4;
 }
-
-
-/**
- * Скрытый чекбокс (флажок)
- * невидим и недоступен :)
- * имя селектора атрибут флажка
- */
 
 [id='nav-toggle'] {
     position: absolute;
     display: none;
 }
 
-
-/**
- * изменение положения переключателя 
- * при просмотре на мобильных устройствах
- * когда навигация раскрыта, распологаем внутри панели
-*/
-
 [id='nav-toggle']:checked~.side-menu>.nav-toggle {
     left: auto;
     right: 2px;
-    top: 4em;
+    top: 0;
 }
-
-
-/**
- * Когда флажок установлен, открывается панель
- * используем псевдокласс:checked
- */
 
 [id='nav-toggle']:checked~.side-menu {
     left: 0;
     box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
+    overflow-xsssssssss: hidden;
 }
-
-
-/* 
- * смещение контента страницы
- * на размер ширины панели,
- * фишка необязательная, на любителя
-*/
 
 [id='nav-toggle']:checked~main>article {
     -webkit-transform: translateX(320px);
@@ -183,22 +120,9 @@
     transform: translateX(320px);
 }
 
-
-/*
- * изменение символа переключателя,
- * привычный крестик (MULTIPLICATION X), 
- * вы можете испльзовать любой другой значок
-*/
-
 [id='nav-toggle']:checked~.side-menu>.nav-toggle:after {
     content: '\2715';
 }
-
-
-/**
- * профиксим баг в Android <= 4.1.2
- * см: http://timpietrusky.com/advanced-checkbox-hack
- */
 
 body {
     -webkit-animation: bugfix infinite 1s;
@@ -209,12 +133,6 @@ body {
         padding: 0;
     }
 }
-
-
-/**
- * позаботьтимся о средних и маленьких экранах
- * мобильных устройств
- */
 
 @media screen and (min-width: 320px) {
     html,
@@ -236,12 +154,7 @@ body {
     }
 }
 
-
-/**
- * Формируем стиль заголовка (логотип) панели 
-*/
-
-.nav h2 {
+.side-menu-logo a {
     width: 90%;
     padding: 0;
     margin: 10px 0;
@@ -258,35 +171,24 @@ body {
     -ms-transform-origin: 0% 0%;
     -moz-transform-origin: 0% 0%;
     -webkit-transform-origin: 0% 0%;
-    transition: opacity 0.8s, transform 0.8s;
-    -ms-transition: opacity 0.8s, -ms-transform 0.8s;
-    -moz-transition: opacity 0.8s, -moz-transform 0.8s;
-    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.5s, transform 0.5s;
+    -ms-transition: opacity 0.5s, -ms-transform 0.5s;
+    -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
 }
 
-.side-menu h2 a {
-    color: #dadada;
+.side-menu-logo a {
     text-decoration: none;
     text-transform: uppercase;
 }
 
-
-/*плавное появление заголовка (логотипа) при раскрытии панели */
-
-[id='nav-toggle']:checked~.side-menu h2 {
+[id='nav-toggle']:checked~.side-menu .side-menu-logo a {
     opacity: 1;
     transform: scale(1, 1);
     -ms-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
 }
-
-
-/**
- * формируем непосредственно само меню
- * используем неупорядоченный список для пунктов меню
- * прикрутим трансфомации и плавные переходы
- */
 
 .side-menu>ul {
     display: block;
@@ -315,9 +217,6 @@ body {
     -ms-transform: translateX(0);
     transform: translateX(0);
 }
-
-
-/* определяем интервалы появления пунктов меню */
 
 .side-menu>ul>li:nth-child(2) {
     -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
@@ -349,11 +248,6 @@ body {
     transition: opacity .5s .7s, transform .5s .7s;
 }
 
-
-/**
- * оформление ссылок пунктов меню
- */
-
 .side-menu>ul>li>a {
     display: inline-block;
     position: relative;
@@ -361,32 +255,24 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 1.2em;
-    color: #dadada;
+    color: white;
     width: 100%;
     text-decoration: none;
-    /* плавный переход */
     -webkit-transition: color .5s ease, padding .5s ease;
     -moz-transition: color .5s ease, padding .5s ease;
     transition: color .5s ease, padding .5s ease;
+    transition: all .5s ease;
 }
-
-
-/**
- * состояние ссылок меню при наведении
- */
 
 .side-menu>ul>li>a:hover,
 .side-menu>ul>li>a:focus {
     color: white;
     padding-left: 15px;
+    background: #29749e66;
 }
 
 
-/**
- * линия подчеркивания ссылок меню
- */
-
-.side-menu>ul>li>a:before {
+/* .side-menu>ul>li>a:before {
     content: '';
     display: block;
     position: absolute;
@@ -411,12 +297,6 @@ body {
     transition: width .5s ease;
 }
 
-
-/**
- * анимируем линию подчеркивания 
- * ссылок при наведении
- */
-
 .side-menu>ul>li>a:hover:before {
     width: 0%;
     background: #3bc1a0;
@@ -429,34 +309,4 @@ body {
     background: transparent;
     -webkit-transition: width 0s ease;
     transition: width 0s ease;
-}
-
-
-/* фон затемнения на основной контент 
- * при этом элементы блокируютя
- * спорная такая фича, если оно вам надо
- * просто раскомментируйте
-*/
-
-
-/*
-.mask-content {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    visibility: hidden;
-    opacity: 0;
-}
-
-[id='nav-toggle']:checked ~ .mask-content {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transition: opacity .5s, visibility .5s;
-    transition: opacity .5s, visibility .5s;
-}
-*/
+} */
