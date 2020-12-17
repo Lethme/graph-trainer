@@ -19,11 +19,27 @@
     <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css">
 
+    <link rel="stylesheet" href="../../assets/css/obhodi.css">
+
     <link rel="stylesheet" href="../../assets/css/icomoon.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/left-nav-style.css">
 </head>
 
 <body class="sections-body" data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="side-menu">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <p class="side-menu-logo">
+            <a href="../../index.html">Tree Brains</a>
+        </p>
+        <ul>
+            <li><a href="teoria.html">Теория</a></li>
+            <li><a href="trenajor.html">Тренировка</a></li>
+            <li><a href="test.html">Тест</a></li>
+        </ul>
+    </nav>
+
     <nav class="navbar navbar-expand-lg navbar-light ftco_navbar bg-light ftco-navbar-light unselectable" id="ftco-navbar">
         <div class="container">
             <a class="navbar-brand" href="../../index.html">
@@ -43,43 +59,20 @@
         </div>
     </nav>
 
-    <section class="sections ftco-section bg-light ftco-slant ftco-slant-white unselectable content-section" id="section-features">
+    <section class="osnovi-sections ftco-section bg-light ftco-slant ftco-slant-white unselectable content-section" id="section-features">
         <div class="container">
+            <h3>Попробуйте здесь постоить своё дерево! И обойти его!</h3>
+            <p>
+                Для управления используйте мышь: нажанитие по вершине <strong>левой</strong> клавиши - добавить вершину, <strong>правой</strong> - удалить вершину
+            </p>
+            <div>
+                <a href="#">Прямой обход</a>
+                <a href="#">Смешанный обход</a>
+                <a href="#">Обратный обход</a>
+                <a href="#">Обход в ширину</a>
 
-            <div class="row">
-                <div class="col-md-12 text-center mb-5 ftco-animate">
-                    <h2 class="text-uppercase ftco-uppercase">Tree Brains - это...</h2>
-                    <div class="row justify-content-center">
-                        <div class="col-md-7">
-                            <p class="lead">Позвольте нам немного рассказать о данном проекте</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 tile-block">
-                    <div class="media mb-4 text-center ftco-media p-md-5 p-4 ftco-animate tile">
-                        <div class="media-body">
-                            <h5 class="mt-0">Удобство</h5>
-                            <p class="">DED</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 tile-block">
-                    <div class="media mb-4 text-center ftco-media p-md-5 p-4 ftco-animate tile">
-                        <div class="media-body">
-                            <h5 class="mt-0">Понятность</h5>
-                            <p class="">DED</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 tile-block">
-                    <div class="media mb-4 text-center ftco-media p-md-5 p-4 ftco-animate tile">
-                        <div class="media-body">
-                            <h5 class="mt-0">Простота</h5>
-                            <p class="">DED</p>
-                        </div>
-                    </div>
-                </div>
             </div>
+            <div id="cy"></div>
         </div>
     </section>
 
@@ -113,6 +106,13 @@
             <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
                 stroke="#4586ff" /></svg></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.17.0/cytoscape.min.js"></script>
+    <script src="https://cdn.rawgit.com/cpettitt/dagre/v0.7.4/dist/dagre.min.js"></script>
+    <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-dagre/1.5.0/cytoscape-dagre.js"></script>
+    <script src="../../assets/js/obhodi/Tree-part1.js"></script>
+    <script src="../../assets/js/obhodi/visual-tree-part1.js"></script>
 
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/popper.min.js"></script>
