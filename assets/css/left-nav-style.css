@@ -20,6 +20,13 @@
     flex-direction: column;
 }
 
+.side-menu-section-name {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .4);
+}
+
 .side-menu-logo {
     text-align: center;
 }

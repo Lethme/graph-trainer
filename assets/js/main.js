@@ -138,7 +138,8 @@ $(function() {
     var $btn = $('#btnTop');
     var $bth_arrow = $('#top-arrow');
     var $home = $('.content-section').first();
-    var startpoint = $home.scrollTop() + $home.height() / 2;
+    // var startpoint = $home.scrollTop() + $home.height() / 2;
+    var startpoint = $home.scrollTop();
 
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > startpoint) {

@@ -1,11 +1,47 @@
-.obhodi-sections{
+.obhodi-sections {
     display: flex;
     color: rgba(41, 27, 21, 0.82);
     font-family: 'Open Sans', sans-serif;
     justify-content: center;
 }
-#cy{
+
+#cy {
     border: 2px solid darkcyan;
     height: 40vw;
+    width: 80%;
+}
 
+.tree-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 20%;
+}
+
+.tree-btns .btn-link {
+    width: 100%;
+    margin: 0 10px 10px 10px;
+}
+
+.pass-result {
+    font-size: 20px;
+}
+
+.training-box {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1200px) {
+    .tree-btns,
+    #cy {
+        width: 100%;
+    }
+    .training-box {
+        flex-direction: column;
+    }
+    .tree-btns .btn-link {
+        margin: 10px 0 0 0;
+    }
 }

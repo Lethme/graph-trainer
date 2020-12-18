@@ -32,6 +32,7 @@
         <label for="nav-toggle" class="nav-toggle" onclick></label>
         <p class="side-menu-logo">
             <a href="../../index.html">Tree Brains</a>
+            <p class="side-menu-section-name"><span>Обходы деревьев</span></p>
         </p>
         <ul>
             <li><a href="teoria.html">Теория</a></li>
@@ -50,10 +51,10 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index.html" class="nav-link">Главная</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Раздел 1</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Раздел 2</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Раздел 3</a></li>
+                    <li class="nav-item active"><a href="../../index.html" class="nav-link">Главная</a></li>
+                    <li class="nav-item"><a href="../osnovi/teoria.html" class="nav-link">Основы</a></li>
+                    <li class="nav-item"><a href="../obhodi/teoria.html" class="nav-link">Обходы деревьев</a></li>
+                    <li class="nav-item"><a href="../sortirovka/teoria.html" class="nav-link">Балансировка</a></li>
                 </ul>
             </div>
         </div>
@@ -65,14 +66,18 @@
             <p>
                 Для управления используйте мышь: нажанитие по вершине <strong>левой</strong> клавиши - добавить вершину, <strong>правой</strong> - удалить вершину
             </p>
-            <div>
-                <a href="#">Прямой обход</a>
-                <a href="#">Смешанный обход</a>
-                <a href="#">Обратный обход</a>
-                <a href="#">Обход в ширину</a>
-
+            <div class="pass-result">
+                <p></p>
             </div>
-            <div id="cy"></div>
+            <div class="training-box">
+                <div id="cy"></div>
+                <div class="tree-btns">
+                    <a class="btn btn-link btn-primary">Прямой обход</a>
+                    <a class="btn btn-link btn-primary">Смешанный обход</a>
+                    <a class="btn btn-link btn-primary">Обратный обход</a>
+                    <a class="btn btn-link btn-primary">Обход в ширину</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -124,6 +129,45 @@
 
     <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/main-scroll.js"></script>
+
+    <script>
+        function show_result(pass_result) {
+            for (let i = 0; i < pass_result.length; i++) {
+                if (i != pass_result.length - 1)
+                    $('.pass-result p').append(pass_result[i] + ' → ');
+                else
+                    $('.pass-result p').append(pass_result[i]);
+            }
+        }
+
+        $('.btn-link').eq(0).on('click', function() {
+            document.tree.pass_result = [];
+            $('.pass-result p').empty();
+            document.tree.preOrderTravers(document.tree.root);
+            show_result(document.tree.pass_result);
+        });
+
+        $('.btn-link').eq(1).on('click', function() {
+            document.tree.pass_result = [];
+            $('.pass-result p').empty();
+            document.tree.inOrderTravers(document.tree.root);
+            show_result(document.tree.pass_result);
+        });
+
+        $('.btn-link').eq(2).on('click', function() {
+            document.tree.pass_result = [];
+            $('.pass-result p').empty();
+            document.tree.postOrderTravers(document.tree.root);
+            show_result(document.tree.pass_result);
+        });
+
+        $('.btn-link').eq(3).on('click', function() {
+            document.tree.pass_result = [];
+            $('.pass-result p').empty();
+            document.tree.obhod_v_width();
+            show_result(document.tree.pass_result);
+        });
+    </script>
 </body>
 
 </html>
