@@ -55,4 +55,12 @@ function draw_tree() {
 
 window.onload = function (e) {
     document.heap = new Heap();
+    $('.btn-link').eq(0).on('click', function() {
+        if(window.location.href.indexOf("trenajor-2")===-1){
+            window.location.href = "trenajor-2.html";
+        }
+        else {
+            window.location.href = "trenajor.html";
+        }
+    });
 };

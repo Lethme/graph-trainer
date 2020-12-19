@@ -8,4 +8,39 @@
 #cy {
     border: 2px solid darkcyan;
     height: 40vw;
+    width: 75%;
+}
+.tree-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 25%;
+}
+
+.tree-btns .btn-link {
+    width: 100%;
+    margin: 0 10px 10px 10px;
+}
+
+.pass-result {
+    font-size: 20px;
+}
+
+.training-box {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1300px) {
+    .tree-btns,
+    #cy {
+        width: 100%;
+    }
+    .training-box {
+        flex-direction: column;
+    }
+    .tree-btns .btn-link {
+        margin: 10px 0 0 0;
+    }
 }
