@@ -83,15 +83,27 @@ class Tree {
     }
 
     handle_create_node(current_value) {
+        if ($('.attention-component').length) return;
         this.search_node(this.root, current_value);
         let nodes = this.search_resultes;
         if (!nodes.current.left || !nodes.current.right) {
-            let added_value = parseInt(prompt('Введите число для добавления в дерево'));
-            if (added_value && added_value != NaN) {
-                this.create_node(nodes.current, added_value, nodes.prev);
-            } else {
-                alert("Некорректный ввод!");
-            }
+            new Attention.Prompt({
+                title: "Добавление элемента",
+                content: "",
+                placeholderText: "Введите целое число",
+                submitText: "Добавить",
+                onSubmit: function(component, value) {
+                    let added_value = parseInt(value);
+                    if (added_value && added_value != NaN) {
+                        document.tree.create_node(nodes.current, added_value, nodes.prev);
+                    } else {
+                        new Attention.Alert({
+                            title: "Ошибка!",
+                            content: "Некорректный ввод!"
+                        });
+                    }
+                }
+            });
         }
     }
 
