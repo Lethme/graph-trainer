@@ -1,0 +1,11 @@
+.osnovi-sections {
+    display: flex;
+    color: rgba(41, 27, 21, 0.82);
+    font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+}
+
+#cy {
+    border: 2px solid darkcyan;
+    height: 40vw;
+}
