@@ -44,18 +44,46 @@ function draw_tree() {
             edges: edges,
         },
     });
-    document.cy.nodes().on('click', function(e){
-        if (document.is_delete){
-            let clickedNode = e.target;
-            document.heap.handle_delete(clickedNode.data().id);
-        }
-
+    document.cy.nodes().on('mouseup', function(e){
+        document.heap.handle_create_node();
     });
+    document.cy.nodes().on('tap', function(e){
+        document.heap.handle_create_node();
+    });
+    document.cy.nodes().on('cxttap', function(e){
+        document.tree.handle_delete_node();
+        draw_tree();
+    });
+    document.cy.center();
+    if(nodes.length===1){
+        document.cy.zoom(2);
+    }
 }
 
 window.onload = function (e) {
     document.heap = new Heap();
     $('.btn-link').eq(0).on('click', function() {
+        let current_array = $('.data-tree-array').eq(0).val();
+        current_array = current_array.split(',');
+        let bad_data = false;
+        for(let elem of current_array){
+            if(isNaN(elem)){
+                bad_data=true;
+                break;
+            }
+        }
+        if(bad_data){
+            new Attention.Alert({
+                title: "Ошибка!",
+                content: "Некорректный ввод!"
+            });
+        }
+        else {
+            current_array = current_array.map(item=>parseInt(item));
+            document.heap.array_to_piramid(current_array);
+        }
+    });
+    $('.btn-link').eq(1).on('click', function() {
         if(window.location.href.indexOf("trenajor-2")===-1){
             window.location.href = "trenajor-2.html";
         }
@@ -63,4 +91,5 @@ window.onload = function (e) {
             window.location.href = "trenajor.html";
         }
     });
+
 };

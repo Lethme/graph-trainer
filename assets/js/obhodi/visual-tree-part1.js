@@ -45,13 +45,18 @@ function draw_tree() {
             edges: edges,
         },
     });
-    document.cy.nodes().on('mousedown', function(e){
+    document.cy.nodes().on('mouseup', function(e){
+        let clickedNode = e.target;
+        document.tree.handle_create_node(parseInt(clickedNode.data().id));
+    });
+    document.cy.nodes().on('tap', function(e){
         let clickedNode = e.target;
         document.tree.handle_create_node(parseInt(clickedNode.data().id));
     });
     document.cy.nodes().on('cxttap', function(e){
         let clickedNode = e.target;
         document.tree.handle_delete_node(parseInt(clickedNode.data().id));
+        draw_tree();
     });
     document.cy.center();
     if(nodes.length===1){

@@ -24,6 +24,7 @@ class Heap {
     }
 
     array_to_piramid(arr){
+
         for(let elem of arr){
             this.create_item(elem)
         }
@@ -36,21 +37,30 @@ class Heap {
 
     }
 
-    create_root() {
-        let value = prompt('Введите значение вершины:');
-        if (value) {
-            if (value !== '') {
-                this.heap.push(new Node(value));
-                this.heap_to_graph();
-                this.create_menu();
+    handle_create_node() {
+        if ($('.attention-component').length) return;
+        new Attention.Prompt({
+            title: "Добавление элемента",
+            content: "",
+            placeholderText: "Введите целое число",
+            submitText: "Добавить",
+            onSubmit: (component, value)=> {
+                let added_value = parseInt(value);
+                if (added_value && !isNaN(added_value)) {
+                    document.heap.create_item(added_value);
+                    this.heap_to_graph();
+                    } else {
+                    new Attention.Alert({
+                        title: "Ошибка!",
+                        content: "Некорректный ввод!"
+                    });
+                }
             }
-            else {
-                alert("Недопустимый ввод!");
-            }
-        }
+        });
     }
 
     search_node(label) {
+        this.heap = [];
         for (let node of this.heap) {
             if (node.label === label)
                 return node;
@@ -78,19 +88,6 @@ class Heap {
         draw_tree();
     }
 
-    view_form_add() {
-        let value = prompt('Введите значение вершины:');
-        if (value) {
-            if (value !== '') {
-                this.create_item(value);
-                this.heap_to_graph();
-            }
-            else {
-                alert("Недопустимый ввод!");
-            }
-        }
-    }
-
     heapify(index) {
         let left = 2 * index + 1;
         let right = 2 * index + 2;
@@ -112,100 +109,11 @@ class Heap {
         }
     }
 
-    create_menu() {
-        $('.control').empty();
-        $('.control').append(`
-                <p><a onclick="document.heap.view_form_add()" >Добавить вершину</a></p>
-                <p><a class="delete-btm" onclick="document.heap.start_delete()" >Режим удаления</a></p>
-                <p><a onclick="document.heap.handle_search()" >Поиск</a></p>
-                <p><a onclick="document.heap.search_delete()" >Найти и удалить</a></p>`);
-    }
-
-    handle_search(){
-        let value = prompt('Введите значение искомой вершины:');
-        if (value) {
-            if (value !== '') {
-                if (this.search_node(value)){
-                    alert("Есть такая вершина!");
-                }
-                else {
-                    alert("Нет такой вершины!");
-                }
-            }
-            else {
-                alert("Недопустимый ввод!");
-            }
-        }
-    }
-
-    start_delete() {
-        document.is_delete = true;
-        $('.delete-btm')[0].onclick = function () {
-            document.heap.stop_delete();
-        };
-        $('.delete-btm')[0].innerText = "Отключить режим удаления";
-    }
-
-    stop_delete() {
-        document.is_delete = false;
-        $('.delete-btm')[0].onclick = function () {
-            document.heap.start_delete();
-        };
-        $('.delete-btm')[0].innerText = "Режим удаления";
-    }
 
     handle_delete(label) {
         let node = this.search_node(label);
-        if (node !== this.heap[0]) {
-            let node_parent_index  = this.heap.indexOf(this.search_node(label));
-            node_parent_index = Math.round((node_parent_index-1)/2);
-            let left_parent_index = this.heap.indexOf(this.search_node(label))-1;
-            left_parent_index = Math.round((left_parent_index-1)/2);
-            if (this.heap.indexOf(this.search_node(label))!==this.heap.length-1){
-                let right_parent_index = this.heap.indexOf(this.search_node(label))+1;
-                right_parent_index = Math.round((right_parent_index-1)/2);
-                if (this.heap[node_parent_index]===this.heap[right_parent_index] ||
-                    this.heap[node_parent_index]!==this.heap[left_parent_index]){
-                    alert("Удаляемая вершина - левый потомок");
-                }
-                else{
-                    alert("Удаляемая вершина - правый потомок");
-                }
-            }
-            else {
-                if (this.heap[node_parent_index]!==this.heap[left_parent_index]){
-                    alert("Удаляемая вершина - левый потомок");
-                }
-                else{
-                    alert("Удаляемая вершина - правый потомок");
-                }
-            }
-        }
-        else {
-            alert("Удаляемая вершина - корень!");
-        }
         this.delete_node(node);
-
-    }
-    search_delete() {
-        let value = prompt('Введите значение удаляемой вершины:');
-        if (value) {
-            if (value !== '') {
-                let node = this.search_node(value);
-                if (!node) {
-                    alert("Ничего не найдено!");
-                }
-                else {
-                    while (node){
-                        this.handle_delete(node);
-                        node = this.search_node(value);
-                    }
-                }
-            }
-            else {
-                alert("Недопустимый ввод!");
-            }
-        }
+        draw_tree();
     }
 }
 class Node {

@@ -134,18 +134,21 @@ class Tree {
     handle_delete_node(current_value) {
         this.search_node(this.root, current_value);
         let cur_nodes = this.search_resultes;
-        if (!cur_nodes.current.left && !cur_nodes.current.right) {
-            if (cur_nodes.prev.right === cur_nodes.current)
-                cur_nodes.prev.right = undefined;
-            else {
-                cur_nodes.prev.left = undefined;
-            }
-            let node_index = Tree.get_node_index_in_array(current_value);
-            nodes.splice(node_index, 1);
-            let edge_index = Tree.get_all_edges_indexes_target(current_value);
-            edges.splice(edge_index, 1);
-            draw_tree();
+        if (cur_nodes.current && cur_nodes.current.left){
+            this.handle_delete_node(cur_nodes.current.left.value);
         }
+        if (cur_nodes.current && cur_nodes.current.right){
+            this.handle_delete_node(cur_nodes.current.right.value);
+        }
+        if (cur_nodes.prev.right === cur_nodes.current)
+            cur_nodes.prev.right = undefined;
+        else {
+            cur_nodes.prev.left = undefined;
+        }
+        let node_index = Tree.get_node_index_in_array(current_value);
+        nodes.splice(node_index, 1);
+        let edge_index = Tree.get_all_edges_indexes_target(current_value);
+        edges.splice(edge_index, 1);
     }
 
 
