@@ -34,7 +34,7 @@
         <label for="nav-toggle" class="nav-toggle" onclick></label>
         <p class="side-menu-logo">
             <a href="../../index.html">Tree Brains</a>
-            <p class="side-menu-section-name"><span>Балансировка</span></p>
+            <p class="side-menu-section-name"><span>Сортировка</span></p>
         </p>
         <ul>
             <li><a href="teoria.html">Теория</a></li>
@@ -56,7 +56,7 @@
                     <li class="nav-item active"><a href="../../index.html" class="nav-link">Главная</a></li>
                     <li class="nav-item"><a href="../osnovi/teoria.html" class="nav-link">Основы</a></li>
                     <li class="nav-item"><a href="../obhodi/teoria.html" class="nav-link">Обходы деревьев</a></li>
-                    <li class="nav-item"><a href="../sortirovka/teoria.html" class="nav-link">Балансировка</a></li>
+                    <li class="nav-item"><a href="../sortirovka/teoria.html" class="nav-link">Сортировка</a></li>
                 </ul>
             </div>
         </div>
@@ -70,7 +70,7 @@
                 равным её значению. В таком случае структура называется <strong>max-heap</strong>, поскольку корень поддерева является максимумом из значений элементов поддерева. Также, что дерево называется <strong>полным бинарным</strong>, если у каждой
                 вершины есть не более двух потомков, а заполнение уровней вершин идет сверху вниз (в пределах одного уровня – слева направо).</p>
             <p>
-                <img src="../../assets/images/sortirovka/1.png">
+                <div class="img-scroll"><img src="../../assets/images/sortirovka/1.png"></div>
             </p>
             <p>
                 Двоичную кучу удобно хранить в виде одномерного массива, причем левый потомок вершины с индексом <strong>i</strong> имеет индекс <strong>2*i+1</strong>, а правый <strong>2*i+2</strong>. Корень дерева – элемент с индексом 0. Высота двоичной
@@ -96,7 +96,7 @@
                 <li>Правый потомок вершины с индексом i имеет индекс 2*i+2.</li>
             </ul>
             <p>
-                <img src="../../assets/images/sortirovka/2.png">
+                <div class="img-scroll"><img src="../../assets/images/sortirovka/2.png"></div>
             </p>
             <p><strong>Корень дерева</strong> – элемент с индексом 0. <strong>Высота двоичной кучи</strong> равна высоте дерева, то есть <strong>log2 (N+1)↑</strong>,где N – количество элементов массива, ↑ – округление в большую сторону до ближайшего целого.</p>
             <p>Для представленной кучи log2 (10+1)↑ = 3,46↑ = 4. Способ построить кучу из неупорядоченного массива – это по очереди добавить все его элементы. Временная оценка такого алгоритма оценивается как <strong>N·log2N</strong>.</p>
@@ -144,10 +144,10 @@ Heap :: Heap()
                 кучи.
             </p>
             <p>
-                <img src="../../assets/images/sortirovka/3.png">
+                <div class="img-scroll"><img src="../../assets/images/sortirovka/3.png"></div>
             </p>
             <p>
-                <img src="../../assets/images/sortirovka/4.png">
+                <div class="img-scroll"><img src="../../assets/images/sortirovka/4.png"></div>
             </p>
             <p>
                 Сложность алгоритма не превышает высоты двоичной кучи (так как количество «подъемов» не больше высоты дерева), то есть равна <strong>log2 N</strong>.
@@ -283,7 +283,7 @@ int getmax(void)
                 Пример просеивания вверх добавленного элемента показан на рисунке:
             </p>
             <p>
-                <img src="../../assets/images/sortirovka/6.png">
+                <div class="img-scroll"><img src="../../assets/images/sortirovka/6.png"></div>
             </p>
             <h4>Просеивание вниз</h4>
             <p>Что делать, если нам нужно заменить корневой элемент на какой-либо другой? В этом случае пирамидальную структуру двоичного дерева можно восстановить с помощью процедуры <strong>просеивания вниз</strong>:</p>
@@ -296,7 +296,7 @@ int getmax(void)
                 Пример просеивания вниз показан на рисунке:
             </p>
             <p>
-                <img src="../../assets/images/sortirovka/7.png">
+                <div class="img-scroll"><img src="../../assets/images/sortirovka/7.png"></div>
             </p>
             <div>
                 <h4>Реализация процедуры просеивания вниз на языке C++</h4>

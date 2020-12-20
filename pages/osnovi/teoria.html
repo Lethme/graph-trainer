@@ -57,7 +57,7 @@
                     <li class="nav-item active"><a href="../../index.html" class="nav-link">Главная</a></li>
                     <li class="nav-item"><a href="../osnovi/teoria.html" class="nav-link">Основы</a></li>
                     <li class="nav-item"><a href="../obhodi/teoria.html" class="nav-link">Обходы деревьев</a></li>
-                    <li class="nav-item"><a href="../sortirovka/teoria.html" class="nav-link">Балансировка</a></li>
+                    <li class="nav-item"><a href="../sortirovka/teoria.html" class="nav-link">Сортировка</a></li>
                 </ul>
             </div>
         </div>
@@ -74,7 +74,9 @@
                 <p><strong>Бинарное дерево</strong> — это конечное множество элементов, которое либо пусто, либо содержит элемент (корень), связанный с двумя различными бинарными деревьями, называемыми левым и правым поддеревьями. Каждый элемент бинарного
                     дерева называется узлом. Связи между узлами дерева называются его ветвями.
                     <br>Способ представления бинарного дерева:
-                    <div><img src="../../assets/images/osnovi/tree.png"></div>
+                    <div>
+                        <div class="img-scroll"><img src="../../assets/images/osnovi/tree.png"></div>
+                    </div>
                     <div>A — корень дерева</div>
                     <div>В — корень левого поддерева</div>
                     <div>С — корень правого поддерева</div>
@@ -107,7 +109,9 @@ struct BinaryTree{
                     </div>
 
                     <div>По степени вершин бинарные деревья делятся:</div>
-                    <p><img src="../../assets/images/osnovi/vidi.png"></p>
+                    <p>
+                        <div class="img-scroll"><img src="../../assets/images/osnovi/vidi.png"></div>
+                    </p>
                     <div><strong>Строгие</strong> – вершины дерева имеют степень ноль (у листьев) или два (у узлов)</div>
                     <div><strong>Нестрогие</strong> – вершины дерева имеют степень ноль (у листьев), один или два (у узлов).
                     </div>
@@ -227,7 +231,7 @@ void Delete_Node_BinaryTree(BinaryTree** Node,int Data){
                             Пример двоичного дерева поиска:
                         </p>
                         <p>
-                            <img src="../../assets/images/osnovi/binary_search_tree.png">
+                            <div class="img-scroll"><img src="../../assets/images/osnovi/binary_search_tree.png"></div>
                         </p>
                         <p>В процессе поиска элемента в дереве, мы сравниваем его со значением корня, если корень оказался больше — то нам нет смысла рассматривать правое поддерево (ведь там все значения еще больше). За счет этого на каждом сравнении «отсекается»
                             узлов дерева, а значит — мы получаем поиск с оценкой сложности <strong>O(log(n))</strong>.</p>

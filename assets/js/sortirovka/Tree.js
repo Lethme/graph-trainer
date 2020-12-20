@@ -23,9 +23,8 @@ class Heap {
         }
     }
 
-    array_to_piramid(arr){
-
-        for(let elem of arr){
+    array_to_piramid(arr) {
+        for (let elem of arr) {
             this.create_item(elem)
         }
         this.heap_to_graph();
@@ -44,12 +43,12 @@ class Heap {
             content: "",
             placeholderText: "Введите целое число",
             submitText: "Добавить",
-            onSubmit: (component, value)=> {
+            onSubmit: (component, value) => {
                 let added_value = parseInt(value);
                 if (added_value && !isNaN(added_value)) {
                     document.heap.create_item(added_value);
                     this.heap_to_graph();
-                    } else {
+                } else {
                     new Attention.Alert({
                         title: "Ошибка!",
                         content: "Некорректный ввод!"
@@ -78,11 +77,11 @@ class Heap {
     heap_to_graph() {
         nodes = [];
         edges = [];
-        nodes.push({data: {id: this.heap[0].label}});
+        nodes.push({ data: { id: this.heap[0].label } });
         for (let i = 1; i < this.heap.length; i++) {
-            let parent_index = Math.round((i) / 2)-1;
-            nodes.push({data: {id: this.heap[i].label}});
-            edges.push({data: {source: this.heap[parent_index].label, target: this.heap[i].label}});
+            let parent_index = Math.round((i) / 2) - 1;
+            nodes.push({ data: { id: this.heap[i].label } });
+            edges.push({ data: { source: this.heap[parent_index].label, target: this.heap[i].label } });
 
         }
         draw_tree();

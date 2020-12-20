@@ -57,7 +57,7 @@
                     <li class="nav-item active"><a href="../../index.html" class="nav-link">Главная</a></li>
                     <li class="nav-item"><a href="../osnovi/teoria.html" class="nav-link">Основы</a></li>
                     <li class="nav-item"><a href="../obhodi/teoria.html" class="nav-link">Обходы деревьев</a></li>
-                    <li class="nav-item"><a href="../sortirovka/teoria.html" class="nav-link">Балансировка</a></li>
+                    <li class="nav-item"><a href="../sortirovka/teoria.html" class="nav-link">Сортировка</a></li>
                 </ul>
             </div>
         </div>
@@ -87,14 +87,14 @@
             </ul>
             <p>Пусть имеем дерево, где A — корень, есть левое и правое поддеревья.</p>
             <p>
-                <img src="../../assets/images/obhodi/1.png">
+                <div class="img-scroll"><img src="../../assets/images/obhodi/1.png"></div>
             </p>
             <h5>Существует три способа обхода дерева:</h5>
             <p>1. Обход дерева в прямом порядке (нисходящий обход)</p>
             <p>Нисходящий или прямой обход дерева выглядит следующим образом: корень - левое поддерево - правое поддерево.</p>
             <p>Наглядное представление прямого обхода:</p>
             <p>
-                <img src="../../assets/images/obhodi/2.png">
+                <div class="img-scroll"><img src="../../assets/images/obhodi/2.png"></div>
             </p>
             <p>
                 Для дерева, изображённого на рисунке выше, нисходящий обход представляет собой последовательность вершин: A-B-D-G-E-C-F-K
@@ -117,7 +117,7 @@ void treeprint(tnode *tree) {
             <p>Смешанный обход осуществляется по схеме: левое поддерево – корень – правое поддерево.</p>
             <p>Наглядное представление смешанного обхода:</p>
             <p>
-                <img src="../../assets/images/obhodi/3.png">
+                <div class="img-scroll"><img src="../../assets/images/obhodi/3.png"></div>
             </p>
             <p>
                 Для дерева, изображённого на рисунке выше, смешанный обход представляет последовательность вершин: G-D-B-E-A-F-C-K
@@ -140,7 +140,7 @@ void treeprint(tnode *tree) {
             <p>Восходящий обход осуществляется по схеме: левое поддерево - правое поддерево – корень. </p>
             <p>Наглядное представление восходящего обхода:</p>
             <p>
-                <img src="../../assets/images/obhodi/4.png">
+                <div class="img-scroll"><img src="../../assets/images/obhodi/4.png"></div>
             </p>
             <p>
                 Для дерева, изображённого на рисунке выше, нисходящий обход представляет собой последовательность вершин: G-E-D-B-F-K-C-A
@@ -164,7 +164,7 @@ void treeprint(tnode *tree) {
             <p>При обходе в ширину узлы посещаются уровень за уровнем(N-й уровень дерева - множество узлов с высотой N). Каждый уровень обходится слева направо. </p>
             <p>Наглядное обхода в ширину:</p>
             <p>
-                <img src="../../assets/images/obhodi/5.png">
+                <div class="img-scroll"><img src="../../assets/images/obhodi/5.png"></div>
             </p>
             <p>
                 Для дерева, изображённого на рисунке выше, обход в ширину представляет последовательность вершин: A-B-C-D-E-F-K-G
