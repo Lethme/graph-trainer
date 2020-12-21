@@ -63,10 +63,21 @@ class Tree {
                 content: "",
                 placeholderText: "Введите целое число",
                 submitText: "Добавить",
-                onSubmit: function(component, value) {
+                onSubmit: (component, value) =>{
                     let added_value = parseInt(value);
-                    if (added_value && added_value != NaN) {
-                        document.tree.create_node(nodes.current, added_value, nodes.prev);
+                    if (added_value && !isNaN(added_value)) {
+                        this.search_resultes = '';
+                        this.search_node(this.root, added_value);
+                        let is_twice_in_tree = this.search_resultes;
+                        if(!is_twice_in_tree.current){
+                            document.tree.create_node(nodes.current, added_value, nodes.prev);
+                        }
+                        else{
+                            new Attention.Alert({
+                                title: "Ошибка!",
+                                content: "Такая вершина уже имеется!"
+                            });
+                        }
                     } else {
                         new Attention.Alert({
                             title: "Ошибка!",
@@ -85,14 +96,6 @@ class Tree {
         }
     }
 
-    static get_all_edges_indexes_source(value) {
-        let all_indexes = [];
-        for (let edge of edges) {
-            if (edge.data.source == value)
-                all_indexes.push(edges.indexOf(edge));
-        }
-        return all_indexes;
-    }
 
 
     static get_all_edges_indexes_target(value) {
@@ -112,20 +115,22 @@ class Tree {
     handle_delete_node(current_value) {
         this.search_node(this.root, current_value);
         let cur_nodes = this.search_resultes;
-        if (cur_nodes.current && cur_nodes.current.left){
-            this.handle_delete_node(cur_nodes.current.left.value);
+        if(cur_nodes.current && cur_nodes.current!==this.root){
+            if (cur_nodes.current && cur_nodes.current.left){
+                this.handle_delete_node(cur_nodes.current.left.value);
+            }
+            if (cur_nodes.current && cur_nodes.current.right){
+                this.handle_delete_node(cur_nodes.current.right.value);
+            }
+            if (cur_nodes.prev.right === cur_nodes.current)
+                cur_nodes.prev.right = undefined;
+            else {
+                cur_nodes.prev.left = undefined;
+            }
+            let node_index = Tree.get_node_index_in_array(current_value);
+            nodes.splice(node_index, 1);
+            let edge_index = Tree.get_all_edges_indexes_target(current_value);
+            edges.splice(edge_index, 1);
         }
-        if (cur_nodes.current && cur_nodes.current.right){
-            this.handle_delete_node(cur_nodes.current.right.value);
-        }
-        if (cur_nodes.prev.right === cur_nodes.current)
-            cur_nodes.prev.right = undefined;
-        else {
-            cur_nodes.prev.left = undefined;
-        }
-        let node_index = Tree.get_node_index_in_array(current_value);
-        nodes.splice(node_index, 1);
-        let edge_index = Tree.get_all_edges_indexes_target(current_value);
-        edges.splice(edge_index, 1);
     }
 }

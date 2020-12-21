@@ -24,7 +24,9 @@ function draw_tree() {
                     'text-opacity': 0.5,
                     'text-valign': 'center',
                     'text-halign': 'right',
-                    'background-color': '#11479e'
+                    'background-color': '#11479e',
+                    'width': 20,
+                    'height': 20,
                 }
             },
 
@@ -39,7 +41,7 @@ function draw_tree() {
                 }
             }
         ],
-
+        wheelSensitivity: 0.3,
         elements: {
             nodes: nodes,
             edges: edges,

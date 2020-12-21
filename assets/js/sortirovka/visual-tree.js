@@ -23,7 +23,9 @@ function draw_tree() {
                     'text-opacity': 0.5,
                     'text-valign': 'center',
                     'text-halign': 'right',
-                    'background-color': '#11479e'
+                    'background-color': '#11479e',
+                    'width': 20,
+                    'height': 20,
                 }
             },
 
@@ -39,6 +41,7 @@ function draw_tree() {
             }
         ],
 
+        wheelSensitivity: 0.3,
         elements: {
             nodes: nodes,
             edges: edges,
@@ -50,8 +53,9 @@ function draw_tree() {
     document.cy.nodes().on('tap', function(e){
         document.heap.handle_create_node();
     });
-    document.cy.nodes().on('cxttap', function(e){
-        document.tree.handle_delete_node();
+    document.cy.nodes().on('cxttapend', function(e){
+        let clickedNode = e.target;
+        document.heap.handle_delete(parseInt(clickedNode.data().id));
         draw_tree();
     });
     document.cy.center();

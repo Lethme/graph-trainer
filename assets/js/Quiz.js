@@ -23,6 +23,9 @@ class Quiz
 
         //Номер текущего вопроса
         this.current = 0;
+
+        //Массив правильных ответов
+        this.answers = []
     }
 
     handle_click(index)
@@ -37,6 +40,7 @@ class Quiz
         if(value >= 256)
         {
             correct = index;
+            this.answers.push(true);
         }
         else
         {

@@ -24,6 +24,7 @@ class Heap {
     }
 
     array_to_piramid(arr) {
+        this.heap = [];
         for (let elem of arr) {
             this.create_item(elem)
         }
@@ -59,7 +60,6 @@ class Heap {
     }
 
     search_node(label) {
-        this.heap = [];
         for (let node of this.heap) {
             if (node.label === label)
                 return node;
@@ -77,12 +77,14 @@ class Heap {
     heap_to_graph() {
         nodes = [];
         edges = [];
-        nodes.push({ data: { id: this.heap[0].label } });
-        for (let i = 1; i < this.heap.length; i++) {
-            let parent_index = Math.round((i) / 2) - 1;
-            nodes.push({ data: { id: this.heap[i].label } });
-            edges.push({ data: { source: this.heap[parent_index].label, target: this.heap[i].label } });
+        if(this.heap.length){
+            nodes.push({ data: { id: this.heap[0].label } });
+            for (let i = 1; i < this.heap.length; i++) {
+                let parent_index = Math.round((i) / 2) - 1;
+                nodes.push({ data: { id: this.heap[i].label } });
+                edges.push({ data: { source: this.heap[parent_index].label, target: this.heap[i].label } });
 
+            }
         }
         draw_tree();
     }
