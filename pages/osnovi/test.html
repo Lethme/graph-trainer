@@ -20,12 +20,11 @@
     <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css">
 
     <link rel="stylesheet" href="../../assets/css/osnovi.css">
+    <link rel="stylesheet" href="../../assets/css/quiz.css">
 
     <link rel="stylesheet" href="../../assets/css/icomoon.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/left-nav-style.css">
-
-    <link rel="stylesheet" href="../../assets/css/attention.css" rel="stylesheet">
 </head>
 
 <body class="sections-body" data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
@@ -56,7 +55,7 @@
                     <li class="nav-item active"><a href="../../index.html" class="nav-link">Главная</a></li>
                     <li class="nav-item"><a href="../osnovi/teoria.html" class="nav-link">Основы</a></li>
                     <li class="nav-item"><a href="../obhodi/teoria.html" class="nav-link">Обходы деревьев</a></li>
-                    <li class="nav-item"><a href="../sortirovka/teoria.html" class="nav-link">Сортировка</a></li>
+                    <li class="nav-item"><a href="teoria.html" class="nav-link">Сортировка</a></li>
                 </ul>
             </div>
         </div>
@@ -64,11 +63,29 @@
 
     <section class="osnovi-sections ftco-section bg-light ftco-slant ftco-slant-white unselectable content-section" id="section-features">
         <div class="container">
-            <h3>Попробуйте здесь постоить своё дерево!</h3>
-            <p>
-                Для управления используйте мышь: нажанитие по вершине <strong>левой</strong> клавиши - добавить вершину, <strong>правой</strong> - удалить вершину
-            </p>
-            <div id="cy"></div>
+
+            <div class="wrapper">
+                <main class="main">
+                    <div class="quiz__head">
+                        <div class="head__content" id="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus odit accusamus, illum quas magni provident odio praesentium commodi sint, porro harum, minus cupiditate architecto culpa aut ex dolore officia.</div>
+                    </div>
+                    <div class="quiz__body">
+                        <div class="buttons">
+                            <div class="buttons__content" id="buttons">
+                                <button class="button">Default button</button><br>
+                                <button class="button button_wrong">Wrong answer</button><br>
+                                <button class="button button_correct">Correct answer</button><br>
+                                <button class="button button_passive">Unclicked button</button><br>
+                            </div>
+                        </div>
+
+                        <div class="quiz__footer">
+                            <div class="footer__content" id="pages">0 / 0</div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
         </div>
     </section>
 
@@ -103,13 +120,6 @@
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
                 stroke="#4586ff" /></svg></div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.17.0/cytoscape.min.js"></script>
-    <script src="https://cdn.rawgit.com/cpettitt/dagre/v0.7.4/dist/dagre.min.js"></script>
-    <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-dagre/1.5.0/cytoscape-dagre.js"></script>
-    <script src="../../assets/js/osnovi/Tree-part1.js"></script>
-    <script src="../../assets/js/osnovi/visual-tree-part1.js"></script>
-
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/popper.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
@@ -121,7 +131,9 @@
     <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/main-scroll.js"></script>
 
-    <script src="../../assets/js/attention.js"></script>
+    <script src="../../assets/js/Quiz.js"></script>
+    <script src="../../assets/js/osnovi/osnovi_test.js"></script>
+
 </body>
 
 </html>

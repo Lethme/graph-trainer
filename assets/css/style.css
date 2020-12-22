@@ -230,6 +230,7 @@ h5,
     .ftco-cover .btn {
         width: 100% !important;
         border: 1px solid red;
+        padding: 20px 10px;
         margin-top: 10px;
     }
 }
@@ -311,6 +312,7 @@ h5,
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
+    margin: 0 5px;
 }
 
 .btn-link {
@@ -882,6 +884,14 @@ img.logo {
     height: 200px;
 }
 
+@media screen and (max-width: 450px) {
+    img.logo {
+        margin-top: 70px;
+        width: 100%;
+        height: auto;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -947,4 +957,35 @@ img.logo {
 
 .img-scroll {
     overflow-x: auto;
+}
+
+.trainer-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.trainer-form .form-group {
+    width: 400px !important;
+    margin: 0 !important;
+}
+
+.trainer-form .btn {
+    width: 200px !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .trainer-form {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .trainer-form .form-group {
+        width: 100% !important;
+        margin: 20px 0 10px 0 !important;
+    }
+    .trainer-form .btn {
+        width: 100% !important;
+        margin: 0 0 10px 0;
+    }
 }
